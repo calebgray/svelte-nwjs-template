@@ -1,11 +1,24 @@
 {
-  "version": "0.0.1",
+  "name": "svelte-nwjs",
+  "version": "0.0.2",
   "main": "index.html",
   "window": {
     "icon": "favicon-32x32.png"
   },
   "build": {
-    "nwVersion": "0.67.1"
-  },
-  "name": "svelte-nwjs"
+    "nwVersion": "0.67.1",
+    "appId": "com.calebgray.svelte-nwjs",
+    "win": {
+      "copyright": "© 2022 Caleb Gray",
+      "icon": "favicon.ico"
+    },
+    "mac": {
+      "copyright": "© 2022 Caleb Gray",
+      "icon": "favicon.icns"
+    },
+    "linux": {
+      "copyright": "© 2022 Caleb Gray",
+      "icon": "logo.png"
+    }
+  }
 }

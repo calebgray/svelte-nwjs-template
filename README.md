@@ -16,11 +16,11 @@ npm install
 ```
 Rename the template to your project's names.
 ```shell
-npm run rename -- "My Cool Project Name" "my-cool-executable-name"
+npm run rename -- "My Cool Project Name" my-cool-executable-name com.calebgray.my-cool-project
 ```
 OR: Set your own `package.json` package name.
 ```shell
-npm run rename -- "My Cool Project Name" "my-cool-executable-name" "package-name"
+npm run rename -- "My Cool Project Name" my-cool-executable-name com.calebgray.my-cool-project cool-package-name
 ```
 OR: Run in interactive mode, pipe values in through stdin, etc.
 ```shell
@@ -29,10 +29,15 @@ npm run rename
 
 
 ## Branding
-Replace the template icons with your own branding in the `src/public` directory.
+1. Replace the template icons with your own branding in the `src/public` directory.
+2. Update your app's copyright notice: `npm run set-copyright -- "© 2022 Caleb Gray"`
 
 
-## Development
+## Versioning
+`npm run set-version -- 1.0.0` # set the version for your app/package
+
+
+## Iterative Development (in a browser)
 `npm run check` # run syntax/sanity checks
 
 `npm test` # run app in a browser with live reload
@@ -41,16 +46,15 @@ Replace the template icons with your own branding in the `src/public` directory.
 
 `npm run preview` # run a test HTTP server
 
-`npm run build` # build sources
+
+## App Development (native application)
+
+`npm run build` # build production sources
 
 `npm run start` # run last build as a native app
 
 
-## Versioning
-`npm run set-version -- 1.0.0` # set the version for your app/package
-
-
 ## Building
-`npm run dist` # create cross-platform executables
+`npm run dist` # create cross-platform executables out of last build
 
-`npm run bundle` # bundle each executable into a branded installer
+`npm run bundle` # bundle each executable into an installer
