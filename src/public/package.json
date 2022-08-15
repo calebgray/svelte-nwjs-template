@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "icon": "favicon-32x32.png"
+  },
+  "build": {
+    "nwVersion": "0.67.1"
+  },
+  "name": "svelte-nwjs"
+}
