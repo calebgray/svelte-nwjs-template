@@ -14,5 +14,5 @@
 </style>
 
 <button on:click={increment}>
-	Click me to count: {count}
+	Click Me: {count}
 </button>

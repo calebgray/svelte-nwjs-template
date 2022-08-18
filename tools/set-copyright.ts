@@ -21,7 +21,7 @@ import fs from 'fs';
 	});
 
 	// Ask a Question as a Promise
-	const question = (str) => new Promise<string>(resolve => reader.question(`${str} `, resolve));
+	const question = (str: String) => new Promise<string>(resolve => reader.question(`${str} `, resolve));
 
 	// Read and Sanitize Project Name
 	while (!(argv[2] = argv[2]?.trim()) && DisplayUsage()) argv[2] = await question(`Copyright (© ${new Date().getFullYear()} Author Name)?`);

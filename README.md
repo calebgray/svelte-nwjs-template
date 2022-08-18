@@ -37,19 +37,17 @@ npm run rename
 `npm run set-version -- 1.0.0` # set the version for your app/package
 
 
-## Iterative Development (in a browser)
+## Development (browser)
 `npm run check` # run syntax/sanity checks
-
-`npm test` # run app in a browser with live reload
 
 `npm run dev` # watch and (re)build sources
 
-`npm run preview` # run a test HTTP server
 
-
-## App Development (native application)
+## Production (browser and native application)
 
 `npm run build` # build production sources
+
+`npm run preview` # run last build in a browser
 
 `npm run start` # run last build as a native app
 

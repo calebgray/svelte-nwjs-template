@@ -1,6 +1,5 @@
 import {argv} from 'process';
 import {basename, dirname} from 'path';
-import {fileURLToPath} from 'url';
 import readline from 'readline';
 import fs from 'fs';
 
@@ -8,8 +7,8 @@ import fs from 'fs';
 	let displayUsage = true;
 
 	// Set the Initial Package Name
-	const sanitizePackageName = packageName => packageName.replace(/[^a-z0-9_-]/gi, '').toLowerCase();
-	let packageName = sanitizePackageName(basename(dirname(dirname(fileURLToPath(import.meta.url)))));
+	const sanitizePackageName = (packageName: String) => packageName.replace(/[^a-z0-9_-]/gi, '').toLowerCase();
+	let packageName = sanitizePackageName(basename(dirname(dirname(__filename))));
 
 	// Display Usage When Missing Required Arguments
 	function DisplayUsage() {
@@ -33,7 +32,7 @@ import fs from 'fs';
 	});
 
 	// Ask a Question as a Promise
-	const question = (str) => new Promise<string>(resolve => reader.question(`${str} `, resolve));
+	const question = (str: String) => new Promise<string>(resolve => reader.question(`${str} `, resolve));
 
 	// Read and Sanitize Project Name
 	let askForPackageName = argv.length < 5;

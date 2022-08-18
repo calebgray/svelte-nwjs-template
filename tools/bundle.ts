@@ -67,7 +67,7 @@ const configurablePlatforms = {
 	// Platform Bundlers
 	const platformBundler = {
 		'win-x86': async (platform = 'x32') => {
-			console.log('TODO');
+			console.log(`TODO: ${platform}`);
 
 			/*const evpName = `${appName}.evp`;
 			const executableName = `${appName}.exe`;*/

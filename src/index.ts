@@ -1,17 +1,17 @@
 import './index.css';
-import Index from './pages/Index.svelte';
-import {writable} from "svelte/store";
+import Routes from './routes.svelte';
+//import {writable} from "svelte/store";
 
-new Index({
+new Routes({
   target: document.body,
+  /*hydrate: true*/
 });
 
-new window['nw'].Tray({
+if ('Tray' in window['nw']) new window['nw'].Tray({
   title: 'MyApp',
   tooltip: 'MyApp is running',
   icon: './favicon-32x32.png',
 });
-
 
 /*export const title = writable("Test Dynamic");
 title.subscribe((t) => {
